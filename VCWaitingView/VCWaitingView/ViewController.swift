@@ -14,12 +14,19 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
+    @IBAction func show(sender: UIButton) {
+        let hud = VCWaitingView(addToView: self.view)
+        hud.show(true)
+        delay(2.0) {
+            hud.hide(true)
+        }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
 
 }
 

@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB1CDA511BA0256800F0BE4A /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1CDA501BA0256800F0BE4A /* Utility.swift */; };
 		BBC5B85B1BA0023600BE8791 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC5B85A1BA0023600BE8791 /* AppDelegate.swift */; };
 		BBC5B85D1BA0023600BE8791 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC5B85C1BA0023600BE8791 /* ViewController.swift */; };
 		BBC5B8601BA0023600BE8791 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBC5B85E1BA0023600BE8791 /* Main.storyboard */; };
 		BBC5B8621BA0023600BE8791 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBC5B8611BA0023600BE8791 /* Images.xcassets */; };
 		BBC5B8651BA0023600BE8791 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBC5B8631BA0023600BE8791 /* LaunchScreen.xib */; };
 		BBC5B8711BA0023600BE8791 /* VCWaitingViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC5B8701BA0023600BE8791 /* VCWaitingViewTests.swift */; };
+		BBC5B87B1BA0028E00BE8791 /* VCWaitingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC5B87A1BA0028E00BE8791 /* VCWaitingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BB1CDA501BA0256800F0BE4A /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		BBC5B8551BA0023600BE8791 /* VCWaitingView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VCWaitingView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBC5B8591BA0023600BE8791 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BBC5B85A1BA0023600BE8791 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +39,7 @@
 		BBC5B86A1BA0023600BE8791 /* VCWaitingViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VCWaitingViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBC5B86F1BA0023600BE8791 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BBC5B8701BA0023600BE8791 /* VCWaitingViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCWaitingViewTests.swift; sourceTree = "<group>"; };
+		BBC5B87A1BA0028E00BE8791 /* VCWaitingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCWaitingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,8 @@
 			children = (
 				BBC5B85A1BA0023600BE8791 /* AppDelegate.swift */,
 				BBC5B85C1BA0023600BE8791 /* ViewController.swift */,
+				BBC5B87A1BA0028E00BE8791 /* VCWaitingView.swift */,
+				BB1CDA501BA0256800F0BE4A /* Utility.swift */,
 				BBC5B85E1BA0023600BE8791 /* Main.storyboard */,
 				BBC5B8611BA0023600BE8791 /* Images.xcassets */,
 				BBC5B8631BA0023600BE8791 /* LaunchScreen.xib */,
@@ -212,6 +218,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB1CDA511BA0256800F0BE4A /* Utility.swift in Sources */,
+				BBC5B87B1BA0028E00BE8791 /* VCWaitingView.swift in Sources */,
 				BBC5B85D1BA0023600BE8791 /* ViewController.swift in Sources */,
 				BBC5B85B1BA0023600BE8791 /* AppDelegate.swift in Sources */,
 			);
@@ -411,6 +419,7 @@
 				BBC5B8761BA0023600BE8791 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BBC5B8771BA0023600BE8791 /* Build configuration list for PBXNativeTarget "VCWaitingViewTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +428,7 @@
 				BBC5B8791BA0023600BE8791 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
