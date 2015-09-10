@@ -10,14 +10,16 @@ import UIKit
 
 class VCWaitingView: UIView {
 
-    var size = CGSize(width: 200.0, height: 200.0)
+    var size = CGSize(width: 100.0, height: 100.0)
+    var backgroundInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+    
     private var transformScale: CGFloat = 0.000001
     private var rotationTransform = CGAffineTransformIdentity
     private var activityIndicatorView: UIActivityIndicatorView!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = UIColor.clearColor()
+        backgroundColor = UIColor.purpleColor()
         alpha = 0 // Make it invisible for now
         
         activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.WhiteLarge)
@@ -47,9 +49,9 @@ class VCWaitingView: UIView {
         
         // Entirely cover the parent view
         if let parent = superview {
-            frame = parent.bounds
+            frame = CGRect(x: backgroundInset.left, y: backgroundInset.top, width: parent.bounds.width - backgroundInset.left - backgroundInset.right, height: parent.bounds.height - backgroundInset.top - backgroundInset.bottom)
         }
-        activityIndicatorView.center = center
+        activityIndicatorView.frame = CGRectMake((frame.width - activityIndicatorView.frame.width)/2.0, (frame.height - activityIndicatorView.frame.height)/2.0, activityIndicatorView.frame.width, activityIndicatorView.frame.height)
     }
     
     override func drawRect(rect: CGRect) {
@@ -113,7 +115,7 @@ class VCWaitingView: UIView {
     
     func statusBarOrientationDidChange(notification: NSNotification) {
         if let superview = self.superview {
-            bounds = superview.bounds
+            setNeedsLayout()
             setNeedsDisplay()
         }
     }

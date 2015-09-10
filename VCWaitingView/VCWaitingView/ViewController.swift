@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     @IBAction func show(sender: UIButton) {
         let hud = VCWaitingView(addToView: self.view)
         hud.show(true)
-        delay(2.0) {
+        delay(5.0) {
             hud.hide(true)
         }
     }
