@@ -35,7 +35,7 @@ class VCWaitingView: UIView {
         unregisterNotifications()
     }
     
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
@@ -55,18 +55,19 @@ class VCWaitingView: UIView {
     }
     
     override func drawRect(rect: CGRect) {
-        let context = UIGraphicsGetCurrentContext()
-        UIGraphicsPushContext(context)
-        
-        CGContextSetGrayFillColor(context, 0, 0.8)
-        
-        // Draw rounded HUD background rect
-        let boxRect = CGRect(x: (bounds.width - size.width) / 2.0, y: (bounds.height - size.height) / 2.0, width: size.width, height: size.height)
-        let bezierPath = UIBezierPath(roundedRect: boxRect, cornerRadius: 7.0)
-        CGContextAddPath(context, bezierPath.CGPath)
-        CGContextFillPath(context)
-        
-        UIGraphicsPopContext()
+        if let context = UIGraphicsGetCurrentContext() {
+            UIGraphicsPushContext(context)
+            
+            CGContextSetGrayFillColor(context, 0, 0.8)
+            
+            // Draw rounded HUD background rect
+            let boxRect = CGRect(x: (bounds.width - size.width) / 2.0, y: (bounds.height - size.height) / 2.0, width: size.width, height: size.height)
+            let bezierPath = UIBezierPath(roundedRect: boxRect, cornerRadius: 7.0)
+            CGContextAddPath(context, bezierPath.CGPath)
+            CGContextFillPath(context)
+            
+            UIGraphicsPopContext()
+        }
     }
     
     func show(animated: Bool) {
@@ -114,7 +115,7 @@ class VCWaitingView: UIView {
     }
     
     func statusBarOrientationDidChange(notification: NSNotification) {
-        if let superview = self.superview {
+     if let _ = self.superview {
             setNeedsLayout()
             setNeedsDisplay()
         }
